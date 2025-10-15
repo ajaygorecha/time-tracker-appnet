@@ -1,1 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Tracker - Time Tracking Has Never Been Easier</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Remixicon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.6.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="assets/css/styles.css" rel="stylesheet">
+    <link href="assets/css/custom.min.css" rel="stylesheet">
+</head>
+<body>
 
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="row align-items-center h-100">
+                <div class="col-6">
+                    <div class="logo-container">
+                        <div class="d-flex align-items-center gap-3 logo">
+                            <a href="index.html" class="link"></a>
+                            <img src="assets/images/header-logo.svg" alt="Time Tracker Logo" class="logo-icon">                            
+                            <div>
+                                <h1 class="logo-text">Time</h1>
+                                <p class="logo-subtext">Tracker</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <!-- Hamburger Menu Button (Mobile Only) -->
+                    <div class="mobile-menu-toggle d-lg-none">
+                        <button class="hamburger-btn" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+                            <span class="hamburger-line"></span>
+                            <span class="hamburger-line"></span>
+                            <span class="hamburger-line"></span>
+                        </button>
+                    </div>
+                    
+                    <!-- Desktop Navigation -->
+                    <div class="nav-links justify-content-end d-none d-lg-flex">
+                        <a href="#benefits" class="nav-link">Benefits</a>
+                        <a href="#features" class="nav-link">Features</a>
+                        <a href="#how-it-works" class="nav-link">Tools</a>
+                        <a href="#download" class="nav-link">Download</a>
+                        <a href="#contact" class="contact-btn">Contact</a>
+                        <div class="language-selector">
+                            <div class="lang-avatar active" data-lang="en" onclick="changeLanguage('en')">
+                                <img src="assets/images/header-language-en.png" alt="English" class="lang-img">
+                            </div>
+                            <div class="lang-avatar" data-lang="fo" onclick="changeLanguage('fo')">
+                                <img src="assets/images/header-language-fo.png" alt="Føroyskt" class="lang-img">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Mobile Navigation Menu -->
+                    <div class="mobile-nav-menu" id="mobileNavMenu">
+                        <button class="mobile-nav-close" onclick="closeMobileMenu()" aria-label="Close navigation menu">
+                            <i class="ri-close-line"></i>
+                        </button>
+                        <div class="mobile-nav-content">
+                            <a href="#benefits" class="mobile-nav-link" onclick="closeMobileMenu()">Benefits</a>
+                            <a href="#features" class="mobile-nav-link" onclick="closeMobileMenu()">Features</a>
+                            <a href="#how-it-works" class="mobile-nav-link" onclick="closeMobileMenu()">Tools</a>
+                            <a href="#download" class="mobile-nav-link" onclick="closeMobileMenu()">Download</a>
+                            <a href="#contact" class="mobile-contact-btn" onclick="closeMobileMenu()">Contact</a>
+                            <div class="mobile-language-selector">
+                                <div class="lang-avatar" data-lang="en" onclick="changeLanguage('en')">
+                                    <img src="assets/images/header-language-en.png" alt="English" class="lang-img">
+                                </div>
+                                <div class="lang-avatar" data-lang="fo" onclick="changeLanguage('fo')">
+                                    <img src="assets/images/header-language-fo.png" alt="Føroyskt" class="lang-img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Timetracker</h1>
+                        <h2 class="hero-subtitle">Time Tracking Has Never Been Easier</h2>
+                        <p class="hero-description">
+                            Keep full control of work hours, projects, and team productivity — all in one simple, smart app.
+                        </p>
+                        <div class="download-buttons">
+                            <a href="https://apps.apple.com/app/time-tracker" target="_blank" class="store-btn-figma">
+                                <img src="assets/images/hero-app-store-button.png" alt="Download on the App Store" class="store-btn-img">
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=com.timetracker" target="_blank" class="store-btn-figma">
+                                <img src="assets/images/hero-google-play-button.png" alt="GET IT ON Google Play" class="store-btn-img">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image">
+                        <img src="assets/images/hero-app-interface.png" alt="Time Tracker App Interface" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section" id="benefits">
+        <div class="container">
+            <h2 class="section-title mb-2">Key Benefits of our Timetracker</h2>
+            <p class="text-center text-gray mb-5">Simplify everyday work management with powerful automation and insights.</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <img src="assets/images/benefits-time-tracking.svg" alt="Time Tracking Icon" width="18" height="18">
+                    </div>
+                    <h3 class="benefit-title">Time Tracking</h3>
+                    <p class="benefit-description">Know exactly when your staff start and finish work.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <img src="assets/images/benefits-billable-hours.svg" alt="Billable Hours Icon" width="18" height="18">
+                    </div>
+                    <h3 class="benefit-title">Billable Hours</h3>
+                    <p class="benefit-description">Track and invoice client work accurately.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <img src="assets/images/benefits-attendance.svg" alt="Attendance Overview Icon" width="18" height="18">
+                    </div>
+                    <h3 class="benefit-title">Attendance Overview</h3>
+                    <p class="benefit-description">Instantly see who's present and who's not.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <img src="assets/images/benefits-leave-management.svg" alt="Leave Management Icon" width="18" height="18">
+                    </div>
+                    <h3 class="benefit-title">Leave & Absence Management</h3>
+                    <p class="benefit-description">Track vacations, days off, and sick leaves easily.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <img src="assets/images/benefits-overtime.svg" alt="Overtime Icon" width="18" height="18">
+                    </div>
+                    <h3 class="benefit-title">Overtime & Shift Balance</h3>
+                    <p class="benefit-description">Manage regular hours, overtime, and part-time work without spreadsheets.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <img src="assets/images/benefits-cost-insights.svg" alt="Cost Insights Icon" width="18" height="18">
+                    </div>
+                    <h3 class="benefit-title">Cost Insights</h3>
+                    <p class="benefit-description">Understand what each project or task costs over time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="features-container">
+                <div class="screenshots-grid">
+                    <img src="assets/images/features-en.png" alt="Time Tracker Mobile App - Company Info" class="w-100">
+                </div>
+                <div class="features-content">
+                    <h2 class="section-title text-start mb-3">Features</h2>
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <div class="feature-checkbox">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <span class="feature-text">Real-time clock-in and clock-out</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-checkbox">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <span class="feature-text">Mobile and web access</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-checkbox">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <span class="feature-text">Overtime and flexible hour setup</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-checkbox">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <span class="feature-text">Project-based time allocation</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-checkbox">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <span class="feature-text">Exportable reports for payroll or billing</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-checkbox">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <span class="feature-text">Role-based access (Manager / Employee)</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-checkbox">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <span class="feature-text">Cloud-synced, always up to date</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title mb-2">How it works?</h2>
+            <div class="steps-container">                
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Step 1</h3>
+                    <p class="step-description">Download the app from App Store or Play Store.</p>
+                </div>                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Step 2</h3>
+                    <p class="step-description">Contact us to get Timetracker account</p>
+                </div>                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Step 3</h3>
+                    <p class="step-description">Employees clock in/out on projects and tasks directly in the app.</p>
+                </div>                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3 class="step-title">Step 4</h3>
+                    <p class="step-description">View real-time dashboards for attendance, time, and costs.</p>
+                </div>                
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <h3 class="step-title">Step 5</h3>
+                    <p class="step-description">Make time reports, export invoice tracked time with one click.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="screenshots-section">
+        <div class="container">
+            <div class="screenshots-background">
+                <div class="screenshots-content">
+                    <div class="screenshots-text">
+                        <h2 class="section-title text-start mb-2">Screenshots</h2>
+                        <p class="screenshots-description">
+                            Take charge of your schedule with Time Tracker! Easily track hours, tasks, and project progress in one app.<br><br>
+                            Simple, effective time management.
+                        </p>
+                    </div>
+                    <div class="screenshots-phones">
+                        <div class="phone-container phone-1">
+                            <img src="assets/images/screenshots-company-info.png" alt="Time Tracker Mobile App - Company Info Screen" class="phone-screenshot">
+                        </div>
+                        <div class="phone-container phone-2">
+                            <img src="assets/images/screenshots-home-screen.png" alt="Time Tracker Mobile App - Home Screen" class="phone-screenshot">
+                        </div>
+                        <div class="phone-container phone-3">
+                            <img src="assets/images/screenshots-splash-screen.png" alt="Time Tracker Mobile App - Splash Screen" class="phone-screenshot">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- More than time tracking Section -->
+    <section class="more-section">
+        <div class="container">
+            <div class="more-container">
+                <div class="more-illustration">
+                    <img src="assets/images/more-features-calendar-illustration.png" alt="Online calendar illustration" class="img-fluid">
+                </div>
+                <div class="more-content">
+                    <h2 class="section-title text-start mb-3">More Than Just Time Tracking</h2>
+                    
+                    <div class="more-features mb-5">
+                        <div class="more-feature">
+                            <div class="more-checkbox">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <span class="more-feature-text">Manage hours, absences, and leave plans.</span>
+                        </div>
+                        <div class="more-feature">
+                            <div class="more-checkbox">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <span class="more-feature-text">Get detailed analytics for every project.</span>
+                        </div>
+                        <div class="more-feature">
+                            <div class="more-checkbox">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <span class="more-feature-text">Empower managers with visibility and control.</span>
+                        </div>
+                        <div class="more-feature">
+                            <div class="more-checkbox">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <span class="more-feature-text">Help employees to be accountable.</span>
+                        </div>
+                        <div class="more-feature">
+                            <div class="more-checkbox">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <span class="more-feature-text">Improve client billing accuracy and transparency.</span>
+                        </div>
+                    </div>
+                    
+                    <div class="download-buttons">
+                        <a href="https://apps.apple.com/app/time-tracker" target="_blank" class="store-btn-figma">
+                            <img src="assets/images/hero-app-store-button.png" alt="Download on the App Store" class="store-btn-img">
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.timetracker" target="_blank" class="store-btn-figma">
+                            <img src="assets/images/hero-google-play-button.png" alt="GET IT ON Google Play" class="store-btn-img">
+                        </a>
+                    </div>
+                    
+                    <p class="more-footer">
+                        Beyond the app — a full-featured web platform designed to do more.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy Section -->
+    <section class="privacy-section">
+        <div class="container">
+            <div class="privacy-header mb-4">
+                <h2 class="section-title mb-3">Privacy & Data Safety</h2>
+                <p class="text-gray">Your data belongs to you — and stays protected.</p>
+            </div>
+            
+            <div class="privacy-grid mt-3">
+                <div class="privacy-card">
+                    <div class="privacy-icon">
+                        <img src="assets/images/privacy-no-data-shared.svg" alt="No data shared icon" width="50" height="50">
+                    </div>
+                    <h3 class="privacy-title">No data shared</h3>
+                    <p class="privacy-description">with third parties</p>
+                </div>
+                
+                <div class="privacy-card highlighted">
+                    <div class="privacy-icon">
+                        <img src="assets/images/privacy-no-data-collected.svg" alt="No data collected icon" width="50" height="50">
+                    </div>
+                    <h3 class="privacy-title">No data collected</h3>
+                    <p class="privacy-description">beyond what you permit</p>
+                </div>
+                
+                <div class="privacy-card">
+                    <div class="privacy-icon">
+                        <img src="assets/images/privacy-data-encrypted.svg" alt="Data encrypted icon" width="50" height="50">
+                    </div>
+                    <h3 class="privacy-title">Data encrypted</h3>
+                    <p class="privacy-description">in transit</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Who is it for Section -->
+    <section class="who-section">
+        <div class="container">
+            <div class="who-container">
+                <div class="who-illustration">
+                    <img src="assets/images/who-is-it-for-team-illustration.png" alt="Team working on computers illustration" class="img-fluid">
+                </div>
+                <div class="who-text">
+                    <h2 class="who-title">Who is Timetracker for</h2>
+                    <p class="who-description">
+                        Our time tracker is built for teams and businesses of all sizes that need a simple, accurate, and flexible way to manage work hours.
+                    </p>
+                    <p class="who-highlight">
+                        Whether you're managing a few employees or multiple departments, our tool helps you stay organized, productive, and always up to date.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download-section" id="download">
+        <div class="container">
+            <div class="download-card">
+                <h2 class="section-title mb-3">Download The App</h2>
+                <div class="download-buttons justify-content-center">
+                    <a href="https://apps.apple.com/app/time-tracker" target="_blank" class="store-btn-figma">
+                        <img src="assets/images/hero-app-store-button.png" alt="Download on the App Store" class="store-btn-img">
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.timetracker" target="_blank" class="store-btn-figma">
+                        <img src="assets/images/hero-google-play-button.png" alt="GET IT ON Google Play" class="store-btn-img">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact-section pb-0" id="contact">
+        <div class="container">
+            <div class="contact-background">
+                <div class="contact-content">
+                    <div class="contact-illustration">
+                        <img src="assets/images/contact-illustration.png" alt="Contact us illustration" class="contact-img">
+                    </div>
+                    <div class="contact-text">
+                        <h2 class="contact-title">Do you want to know more contact us.</h2>
+                        <p class="contact-subtitle">If you have questions or want to start using Timetracker</p>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <a href="mailto:appnet@appnet.fo" class="link"></a>
+                                <div class="contact-icon">
+                                    <img src="assets/images/contact-email-icon.svg" alt="Email" width="18" height="18">
+                                </div>
+                                <span class="contact-text-info">appnet@appnet.fo</span>
+                            </div>
+                            <div class="contact-item">
+                                <a href="tel:+298898048" class="link"></a>
+                                <div class="contact-icon">
+                                    <img src="assets/images/contact-phone-icon.svg" alt="Phone" width="18" height="18">
+                                </div>
+                                <span class="contact-text-info">+298 89 80 48</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex justify-content-center">
+                        <a href="https://appnet.fo" target="_blank" class="link">
+                            <img src="assets/images/footer-appnet-logo.png" alt="Appnet Logo" class="footer-logo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
